@@ -16,8 +16,40 @@
         <version>2.7.13</version>
     </parent>
 
+    <modules>
+        <module>angel-common</module>
+    </modules>
+
     <properties>
         <java.version>1.8</java.version>
+        <angel.version>1.0.0</angel.version>
+        <lombok.version>1.18.28</lombok.version>
+        <hutool.version>5.8.20</hutool.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- angel-common -->
+            <dependency>
+                <groupId>com.max</groupId>
+                <artifactId>angel-common</artifactId>
+                <version>${angel.version}</version>
+            </dependency>
+
+            <!-- lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- hutool -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
