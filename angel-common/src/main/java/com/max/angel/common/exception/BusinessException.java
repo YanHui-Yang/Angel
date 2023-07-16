@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
 @Setter
 @AllArgsConstructor
 @Accessors(chain = true)
-public class CommonException extends RuntimeException {
+public class BusinessException extends RuntimeException {
 
     private int code;
     private String message;
